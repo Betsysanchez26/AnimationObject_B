@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.betsysanchez.animationobject_b.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/animationCanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonContainer">
+
+        <ImageView
+            android:id="@+id/faceIcon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_face"
+            android:tint="@color/colorPrimary" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnRun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:onClick="onButtonClick"
+            android:textSize="11dp"
+            android:text="Bounce" />
+        <Button
+            android:id="@+id/btnAcelerate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acelerate"
+            android:textSize="11dp"
+            android:layout_weight="0.2"/>
+        <Button
+            android:id="@+id/btnAnticipate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anticipate"
+            android:textSize="11dp"
+            android:layout_weight="0.2"/>
+        <Button
+            android:id="@+id/btnCombitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overshot"
+            android:textSize="11dp"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
+</RelativeLayout>
